@@ -6,6 +6,15 @@ import urllib.request
 import requests
 
 
+
+
+
+
+
+
+
+
+
 url = get_connection('tsa_item_demand')
 
 query = '''
@@ -18,7 +27,7 @@ query = '''
         LEFT JOIN stores USING(store_id)
         '''
 
-def get_data():
+def get_tsa():
     '''
     a function that searches for and retieves data. 
     if it does not find it it will retirve the data 

@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
-from acquire import get_data, opsd_data
+from acquire import get_tsa, opsd_data
 
-def prepare():
+def prep_tsa():
     '''
     gets and prepares the tsa_item_demand data
     '''
-    df = get_data()
+    df = get_tsa()
     
     df.sale_date = pd.to_datetime(df.sale_date)
     
