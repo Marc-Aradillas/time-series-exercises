@@ -2,6 +2,11 @@ import pandas as pd
 import numpy as np
 from acquire import get_tsa, opsd_data
 
+
+#==============Data_prep_exercise functions==========
+
+
+
 def prep_tsa():
     '''
     gets and prepares the tsa_item_demand data
@@ -38,10 +43,8 @@ def prep_opsd():
     df['month'] = df.index.strftime('%B')
     
     df['year'] = df.index.year
-    
-    mean_values = df.mean()
-    
-    df = df.fillna(mean_values)
+        
+    df = df.fillna(0)
 
     return df
 
