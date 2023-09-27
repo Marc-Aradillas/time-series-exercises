@@ -23,6 +23,8 @@ def prep_tsa():
     
     df['day_of_week'] = df.index.day_name()
 
+    df['sales_total'] = df.sale_amount * df.item_price
+
     return df
 
 
